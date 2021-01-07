@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #e4e6eb;
+}
+
+li, a {
+    text-decoration: none;
+    transition: all 0.1s ease 0s;
+}
+
+header {
+    font-family: "DejaVu Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+    background-color: #18191a;
+}
+
+.my-name {
+    cursor: pointer;
+    display: block;
+    padding-bottom: 3px;
+    padding-right: 20px;
+    position: relative;
+}
+
+
+.my-name:before {
+    content: "";
+    position: absolute;
+    width: 15%;
+    height: 1px;
+    bottom: 0;
+    border-bottom: 1px solid #E9D3FF;
+}
+
+.navigation-links {
+    list-style: none;
+    text-align: center
+
+}
+
+.navigation-links li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.navigation-links li a:hover {
+    color: #E9D3FF;
+}
