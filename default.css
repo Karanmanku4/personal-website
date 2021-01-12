@@ -8,63 +8,83 @@
     font-family: "DejaVu Sans", sans-serif;
 }
 
-li, a {
-    text-decoration: none;
-    transition: all 0.1s ease 0s;
-    background-color: #18191a;
-}
-
 header {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     display: flex;
     justify-content: flex-start;
-    padding: 30px;
+    padding: 2rem;
     background-color: #18191a;
+    box-shadow: 0 10px #0c0c0d;
 }
 
-.active {
+.active[data-tab-target] {
     cursor: pointer;
     position: relative;
 }
 
-.active :before {
+.active[data-tab-target]:before {
     content: "";
     display: block;
     position: absolute;
     width: 15%;
     height: 1px;
     bottom: 0;
-    border-bottom: 1px solid #E9D3FF;
+    border-bottom: 1px solid #add8e6;
 }
 
-.navigation-links {
+[data-tab-content] {
+    display: none;
+}
+
+
+.nav-items {
     list-style: none;
     text-align: center;
     background-color: #18191a;
 }
 
-.navigation-links li {
+.nav-items li {
     display: inline-block;
     padding: 0 20px;
-    color: #18191a;
+    text-decoration: none;
+    transition: all 0.1s ease 0s;
+    background-color: #18191a;
 }
 
-.navigation-links li a:hover {
-    color: #E9D3FF;
+.nav-items li:hover {
+    cursor: pointer;
+    color: #add8e6;
 }
 
-.introduction{
+.container {
+    display: inline-block;
+}
+
+
+.introduction.active[data-tab-content] {
+    display: flex;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
-    text-align: left;
+    transform: translate(-50%, -50%);
 }
 
-.introduction h1 {
+.introduction .details  {
+    width: 35vw;
+}
+
+.introduction .details h1 {
     font-size: 36px;
     font-weight: bold;
     padding-bottom: 10px;
-    color: #d0a0ff;
+    color: #72bcd4;
+}
+
+.profile-pic {
+    padding-left: 20px;
+    height: 300px;
+    border-radius: 5%;
+    width: auto;
 }

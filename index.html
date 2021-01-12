@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
-    <title>Title</title>
+    <title>Karan Manku</title>
     <link rel="stylesheet" href="default.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
 
 
+<!--Navigation menu ---------------------------->
 <header>
-    <!--navigation menu ---------------------------->
     <nav>
-        <ul class="navigation-links">
-            <li class="active"><a href="#">Karan Manku</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Music</a></li>
+        <ul class="nav-items" >
+            <li data-tab-target="#intro" onclick="setTabAndContentActive(this)" class="active">Karan Manku</li>
+            <li data-tab-target="#projects" onclick="setTabAndContentActive(this)">Projects</li>
+            <li data-tab-target="#music" onclick="setTabAndContentActive(this)">Music</li>
         </ul>
     </nav>
 </header>
+
 <!--Introduction---------------------------->
-<div class="introduction">
-    <h1>Hello!</h1>
-    <p class="personal-intro">iemapijgioejaiogjsiojgiaaaaaaaaaaaaaaaaaaaeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaojsjsioefjiosejiojfiosjeiofjsreaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiofjeiojfsi</p>
+<div class="container">
+    <section id="intro" class="introduction active" data-tab-content>
+        <div class="details" >
+            <h1>Oh, you're here!</h1>
+            <p>Nice to see my link get clicked, even if it was just by accident. Since you made it this far, why not take a look around?</p>
+        </div>
+        <img src="media/pic.jpg" alt="Profile Picture" class="profile-pic">
+    </section>
 </div>
+
+
+<!--Projects---------------------------->
+<section id="projects" class="projects" data-tab-content>
+    <div>
+        <h1>Projects</h1>
+    </div>
+</section>
+
+<!--Music---------------------------->
+<section id="music" class="music " data-tab-content>
+    <h1>Music</h1>
+</section>
 
 </body>
 </html>
