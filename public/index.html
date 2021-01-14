@@ -1,89 +1,107 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>Karan Manku</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="intro.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.2.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.2.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.2.2/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<!--Navigation menu ---------------------------->
+<header>
+    <nav>
+        <ul class="nav-items">
+            <li data-tab-target="#intro" onclick="setTabAndContentActive(this)" class="active">Karan Manku</li>
+            <li data-tab-target="#projects" onclick="setTabAndContentActive(this)">Projects</li>
+            <li data-tab-target="#music" onclick="setTabAndContentActive(this)">Music</li>
+        </ul>
+    </nav>
+</header>
+
+<!--Introduction---------------------------->
+<section id="intro" class="introduction active center-screen" data-tab-content>
+    <div class="details">
+        <h1>Oh, you're here!</h1>
+        <p>Nice to see my link get clicked, even if it was just by accident.
+            <br>Since you made it this far, why not take a look around?</p>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <img src="media/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+</section>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<!--Projects---------------------------->
+<section id="projects" class="projects" data-tab-content>
+    <div class="grid-container">
+        <!----Composing App ---------------------->
+        <div class="grid-item-container">
+            <a href="https://github.com/Karanmanku4/composing-app" target="_blank">
+                <h2>Composing App</h2>
+            </a>
+            <p><a href="https://github.com/Karanmanku4/composing-app" target="_blank">My most ambitious project yet</a>
+                - I've been
+                developing an Android application for composing music! The app is written in both Java and Kotlin and
+                follows
+                Android best practices: MVVM architecture, unit testing, Material Design, dependency injection, and
+                various
+                design patterns are already implemented in the project.
+                Currently, users can:</p>
+            <ul>
+                <li>Add measures to the score and scroll through their piece</li>
+                <li>Change the clef of the score</li>
+                <li>Add notes and rests of the most common note lengths</li>
+                <li>Undo/Redo certain actions</li>
+            </ul>
+            <p>Before fighting with Android's custom Views some more, my next big step for the project is to build
+                a backend so users can save their music. </p>
+        </div>
+        <video controls autoplay muted loop>
+            <source src="media/composing-app-demo.mp4">
+        </video>
+
+        <!----Big Data Challenge---------------------->
+        <a href="https://toronto.citynews.ca/video/2020/02/27/students-share-climate-saving-ideas/" target="_blank">
+            <img src="media/bigdata.png" alt="Big Data Challenge">
+        </a>
+        <div class="grid-item-container">
+            <h2>Big Data Challenge</h2>
+            <p>Each year, <a href="https://stemfellowship.org/" target="_blank">Stem Fellowship</a> challenges
+                high-school
+                students and undergraduates to team up and undertake a research project. I wrote a few Python scripts
+                that parsed through JSON and CSV files, then transformed the data with Matlab and Excel into graphs for
+                our report and presentation at nationals.</p>
+        </div>
+
+        <!----Personal Website---------------------->
+        <div class="grid-item-container">
+            <h2>Personal Website</h2>
+            <p>This site is built with HTML, CSS, and VanillaJS, and hosted using Firebase. That's pretty much it for now.</p>
+        </div>
+        <img src="media/personal-website.png" alt="Personal Website Image">
+    </div>
+    <h1 class="footer">...and more on the way!</h1>
+</section>
+
+
+<!--Music---------------------------->
+<section id="music" class="music" data-tab-content>
+    <h1>Some music for you!</h1>
+    <p>Over the years, I've occasionally transcribed and arranged some of my favourite pieces.
+        <br>Feel free to take a listen!</p>
+    <div class="grid-container">
+        <iframe class="score" src="https://musescore.com/user/2130221/scores/5409451/embed" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
+        <iframe src="https://musescore.com/user/2130221/scores/4875763/embed" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
+        <iframe src="https://musescore.com/user/2130221/scores/4825131/embed" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
+        <iframe src="https://musescore.com/user/2130221/scores/4776686/embed" frameborder="0"
+                allow="autoplay; fullscreen"></iframe>
+    </div>
+    <h1 class="footer">...original pieces coming soon!</h1>
+</section>
+</body>
 </html>
